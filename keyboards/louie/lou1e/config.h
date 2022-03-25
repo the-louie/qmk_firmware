@@ -20,11 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID 0xFEED
-#define PRODUCT_ID 0x0001
-#define DEVICE_VER 0x0004
+#define VENDOR_ID 0x100E
+#define PRODUCT_ID 0x0005
+#define DEVICE_VER 0x0001
 #define MANUFACTURER The Louie
-#define PRODUCT lou1d
+#define PRODUCT lou1e
 #define DESCRIPTION A custom keyboard
 
 // make it smaller
@@ -45,8 +45,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 15
 
-#define MATRIX_ROW_PINS { D0, D1, D5, D3, D2}
-#define MATRIX_COL_PINS { B7, D4, D6, D7, B4, C7, C6, B6, B5, F7, F6, F5, F0, F1, F4 }
+// lou1e
+//                        1   2   3    4   5
+#define MATRIX_ROW_PINS { C1, C5, B5, D1, D0 }
+//                         0  1   2   3    4   5   6   7  8   9   10   11  12  13
+#define MATRIX_COL_PINS { C0, D4, C4, B4, C7, D5, F6, D7, C6, D3, F7,  D6, B6, B7 }
+// lou1d
+// #define MATRIX_ROW_PINS { D0, D1, D5, D3, D2}
+// #define MATRIX_COL_PINS { B7, D4, D6, D7, B4, C7, C6, B6, B5, F7, F6, F5, F0, F1, F4 }
+// unknown:
 // #define MATRIX_ROW_PINS { B7, B6, B5, B4, B3  }
 // #define MATRIX_COL_PINS { A15, A13, A14, B12, B11, B10, B9, B15, B14, B13, B8, A0, A1, A2 }
 
