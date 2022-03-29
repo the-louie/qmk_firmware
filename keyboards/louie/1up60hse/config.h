@@ -23,12 +23,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0x6F75 // OU
 #define PRODUCT_ID      0x6873
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    1upkeyboards
+#define MANUFACTURER    1upkeylou1
 #define PRODUCT         1up60hse
 
 /* key matrix size */
 #define MATRIX_ROWS 5
-#define MATRIX_COLS 14
+#define MATRIX_COLS 15
 
 /*
  * Keyboard Matrix Assignments
@@ -40,18 +40,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { B3, B2, B1, B0, D4 }
-#define MATRIX_COL_PINS { C7, F7, F6, F5, F4, F1, E6, D1, D0, D2, D3, D5, D6, D7 }
+#define MATRIX_ROW_PINS { D0, D1, D5, D3, D2}
+#define MATRIX_COL_PINS { B7, D4, D6, D7, B4, C7, C6, B6, B5, F7, F6, F5, F0, F1, F4 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
-#define DIODE_DIRECTION COL2ROW
-
+#define DIODE_DIRECTION ROW2COL
+/* No backlite
 #define BACKLIGHT_PIN B7
 #define BACKLIGHT_BREATHING
 #define BACKLIGHT_LEVELS 5
+*/
 
-#define RGB_DI_PIN F0
+#define RGB_DI_PIN E5
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 14
