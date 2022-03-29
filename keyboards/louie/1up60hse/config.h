@@ -20,11 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x6F75 // OU
-#define PRODUCT_ID      0x6873
+#define VENDOR_ID       0xB00B // OU
+#define PRODUCT_ID      0x0005
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    1upkeylou1
-#define PRODUCT         1up60hse
+#define MANUFACTURER    1ouie
+#define PRODUCT         1ou1e
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -40,8 +40,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { D0, D1, D5, D3, D2}
-#define MATRIX_COL_PINS { B7, D4, D6, D7, B4, C7, C6, B6, B5, F7, F6, F5, F0, F1, F4 }
+
+//  louie                 1   2   3   4   5
+#define MATRIX_ROW_PINS { F1, F5, B5, D1, D0 }
+//                        0   1   2   3   4   5   6   7   8   9   10  11  12  13  14
+#define MATRIX_COL_PINS { F0, D4, F4, B4, C7, D5, F6, D7, C6, D3, F7, D6, B6, B7, D2 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/

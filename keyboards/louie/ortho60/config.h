@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xCA04
+#define VENDOR_ID       0xB00B
 #define PRODUCT_ID      0x4F60 // "O" 60
 #define DEVICE_VER      0x0002
 #define MANUFACTURER Louie
@@ -31,10 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MATRIX_COL_PINS { B11, B10, B1, B0, A7, A6, A5, A4, A3, A2, A1, A0 }
 //#define MATRIX_ROW_PINS { B3, B4, B5, B6, B7 }
 
-//  louie                 1   2   3   4   5
+//  louie           ROW   1   2   3   4   5
 #define MATRIX_ROW_PINS { C1, C5, B5, D1, D0 }
-//                        0   1   2   3   4   5   6   7   8   9   10  11  12  13
 #define MATRIX_COL_PINS { C0, D4, C4, B4, C7, D5, F6, D7, C6, D3, F7, D6, B6, B7 }
+//               COLUMN   0   1   2   3   4   5   6   7   8   9   10  11  12  13
+
 #define DIODE_DIRECTION ROW2COL
 
 // #define BACKLIGHT_PIN A8
