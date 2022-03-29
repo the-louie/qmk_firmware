@@ -20,12 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID 0x100E
+#define VENDOR_ID 0xB00B
 #define PRODUCT_ID 0x0005
 #define DEVICE_VER 0x0001
 #define MANUFACTURER The Louie
 #define PRODUCT lou1e
-#define DESCRIPTION A custom keyboard
+#define DESCRIPTION A custom ortho keyboard
 
 // make it smaller
 #define NO_ACTION_MACRO
