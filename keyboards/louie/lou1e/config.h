@@ -23,8 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xB00B // OU
 #define PRODUCT_ID      0x0005
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    1ouie
-#define PRODUCT         1ou1e
+#define MANUFACTURER    louie
+#define PRODUCT         lou1e
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -55,10 +55,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_LEVELS 5
 */
 
-#define RGB_DI_PIN E5
+#define RGB_DI_PIN B3
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 14
+#define RGBLED_NUM 69
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
