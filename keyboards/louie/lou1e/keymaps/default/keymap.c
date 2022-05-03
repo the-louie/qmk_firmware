@@ -18,23 +18,23 @@
 #include "keymap_swedish.h"
 
 // N.B
-// First column is not connected on lou:1e
+// First column is not connected on lou:1e v1.0
 //
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [0] = LAYOUT(
         XXX,     KC_ESC,   KC_1,     KC_2,     KC_3,   KC_4,   KC_5,   KC_6,  KC_7, KC_8,     KC_9,     KC_0,     KC_MINS,   NO_ACUT,   KC_BSPC,  \
-        XXX,     KC_TAB,   KC_Q,     KC_W,     KC_E,   KC_R,   KC_T,   KC_Y,  KC_U, KC_I,     KC_O,     KC_P,     SE_AA,     SE_CIRC,   XXX, \
-        XXX,     KC_LCTL,  KC_A,     KC_S,     KC_D,   KC_F,   KC_G,   KC_H,  KC_J, KC_K,     KC_L,     KC_SCLN,  KC_QUOT,   SE_ASTR,   KC_ENT,    \
-        XXX,     KC_LSFT,  KC_Z,     KC_X,     KC_C,   KC_V,   KC_B,   KC_N,  KC_M, KC_COMM,  KC_DOT,   SE_MINS,  KC_PGUP,   KC_UP,     KC_PGDN, \
+        XXX,     KC_TAB,   KC_Q,     KC_W,     KC_E,   KC_R,   KC_T,   KC_Y,  KC_U, KC_I,     KC_O,     KC_P,     SE_ARNG,   SE_DIAE,   XXX, \
+        XXX,     KC_LCTL,  KC_A,     KC_S,     KC_D,   KC_F,   KC_G,   KC_H,  KC_J, KC_K,     KC_L,     SE_ODIA,  SE_ADIA,   SE_QUOT,   KC_ENT,    \
+        XXX,     KC_LSFT,  KC_Z,     KC_X,     KC_C,   KC_V,   KC_B,   KC_N,  KC_M, SE_COMM,  SE_DOT,   SE_MINS,  KC_PGUP,   KC_UP,     KC_PGDN, \
         XXX,     KC_LCTL,  KC_LGUI,  KC_LALT,  XXX,    KC_SPC, XXX,    MO(1), XXX,  KC_SPC,   XXX,      KC_RALT,  KC_LEFT,   KC_DOWN,   KC_RIGHT
     ),
     /* extras */
     [1] = LAYOUT(
-        XXX,     RGB_TOG,  RGB_M_P,  RGB_M_B,  RGB_M_R,  RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G,  RGB_M_T, KC_MINS,  XXX,     XXX,    KC_DEL,  \
-        XXX,     RGB_MOD,  RGB_HUI,  RGB_HUD,  XXX,      XXX,      XXX,      KC_PGUP, KC_UP,   KC_PGDN,  XXX,     XXX,      XXX,     XXX,    KC_PSCR, \
-        XXX,     KC_CAPS,  XXX,      XXX,      XXX,      XXX,      XXX,      KC_LEFT, KC_DOWN, KC_RIGHT, XXX,     XXX,      XXX,     XXX,    XXX,  \
-        XXX,     XXX,      NO_LESS,  NO_GRTR,  NO_PIPE,  XXX,      XXX,      XXX,     XXX,     XXX,      XXX,     XXX,      XXX,     XXX,    XXX, \
-        XXX,     KC_LCTL,  KC_LGUI,  KC_LALT,  XXX,      XXX,      XXX,      XXX,     XXX,     XXX,      KC_RALT, XXX,      XXX,     XXX,    XXX
+        XXX,     RGB_TOG,  RGB_M_P,  RGB_M_B,  RGB_M_R,  RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G,  RGB_M_T,    XXX,   XXX,     XXX,   KC_DEL,  \
+        XXX,     RGB_MOD,  RGB_HUI,  RGB_HUD,  XXX,      XXX,      XXX,      KC_PGUP, KC_UP,   KC_PGDN,  XXX,        XXX,   XXX,     XXX,   XXX, \
+        XXX,     KC_CAPS,  XXX,      XXX,      XXX,      XXX,      XXX,      KC_LEFT, KC_DOWN, KC_RIGHT, XXX,        XXX,   XXX,     XXX,   KC_PSCR,  \
+        XXX,     XXX,      NO_LESS,  NO_GRTR,  NO_PIPE,  XXX,      XXX,      XXX,     XXX,     XXX,      XXX,        XXX,   XXX,     XXX,   XXX, \
+        XXX,     KC_LCTL,  KC_LGUI,  KC_LALT,  XXX,      XXX,      XXX,      XXX,     XXX,     XXX,      KC_RALT,    XXX,   KC_HOME, XXX,   KC_END
     )
 };
