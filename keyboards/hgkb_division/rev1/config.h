@@ -45,8 +45,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { B4, B6, F7, F6, F5, F4, B5 }
 
 
-#define DIODE_DIRECTION COL2ROW
-// #define DIODE_DIRECTION ROW2COL
+// #define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
