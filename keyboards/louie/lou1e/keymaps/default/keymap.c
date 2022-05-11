@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* extras */
     [1] = LAYOUT(
         XXX,     RGB_TOG,  RGB_M_P,  RGB_M_B,  RGB_M_R,  RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G,  RGB_M_T,    XXX,   XXX,     XXX,   KC_DEL,  \
-        XXX,     RGB_MOD,  RGB_HUI,  RGB_HUD,  XXX,      XXX,      XXX,      KC_PGUP, KC_UP,   KC_PGDN,  XXX,        XXX,   XXX,     XXX,   XXX, \
+        XXX,     RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_VAI,  RGB_VAD,  XXX,      KC_PGUP, KC_UP,   KC_PGDN,  XXX,        XXX,   XXX,     XXX,   XXX, \
         XXX,     KC_CAPS,  XXX,      XXX,      XXX,      XXX,      XXX,      KC_LEFT, KC_DOWN, KC_RIGHT, XXX,        XXX,   XXX,     XXX,   KC_PSCR,  \
         XXX,     XXX,      NO_LESS,  NO_GRTR,  NO_PIPE,  XXX,      XXX,      XXX,     XXX,     XXX,      XXX,        XXX,   XXX,     XXX,   XXX, \
         XXX,     KC_LCTL,  KC_LGUI,  KC_LALT,  XXX,      XXX,      XXX,      XXX,     XXX,     XXX,      KC_RALT,    XXX,   KC_HOME, XXX,   KC_END
