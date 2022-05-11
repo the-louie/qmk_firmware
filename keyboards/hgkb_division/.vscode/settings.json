@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.todo.txt": "todo",
+    "hgkb_division.h": "c",
+    "division.h": "c"
+  }
+}
