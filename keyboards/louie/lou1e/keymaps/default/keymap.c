@@ -14,9 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+#define DRIVER_LED_TOTAL 69
+
+
 #include QMK_KEYBOARD_H
+#include "rgblight_list.h"
 #include "keymap_swedish.h"
 
+
+#define XXX KC_NO
 // N.B
 // First column is not connected on lou:1e v1.0
 //
@@ -25,16 +32,40 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         XXX,     KC_ESC,   KC_1,     KC_2,     KC_3,   KC_4,   KC_5,   KC_6,  KC_7, KC_8,     KC_9,     KC_0,     KC_MINS,   NO_ACUT,   KC_BSPC,  \
         XXX,     KC_TAB,   KC_Q,     KC_W,     KC_E,   KC_R,   KC_T,   KC_Y,  KC_U, KC_I,     KC_O,     KC_P,     SE_ARNG,   SE_DIAE,   XXX, \
-        XXX,     KC_LCTL,  KC_A,     KC_S,     KC_D,   KC_F,   KC_G,   KC_H,  KC_J, KC_K,     KC_L,     SE_ODIA,  SE_ADIA,   SE_QUOT,   KC_ENT,    \
+        XXX,     MO(2),  KC_A,     KC_S,     KC_D,   KC_F,   KC_G,   KC_H,  KC_J, KC_K,     KC_L,     SE_ODIA,  SE_ADIA,   SE_QUOT,   KC_ENT,    \
         XXX,     KC_LSFT,  KC_Z,     KC_X,     KC_C,   KC_V,   KC_B,   KC_N,  KC_M, SE_COMM,  SE_DOT,   SE_MINS,  KC_PGUP,   KC_UP,     KC_PGDN, \
         XXX,     KC_LCTL,  KC_LGUI,  KC_LALT,  XXX,    KC_SPC, XXX,    MO(1), XXX,  KC_SPC,   XXX,      KC_RALT,  KC_LEFT,   KC_DOWN,   KC_RIGHT
     ),
     /* extras */
     [1] = LAYOUT(
         XXX,     RGB_TOG,  RGB_M_P,  RGB_M_B,  RGB_M_R,  RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G,  RGB_M_T,    XXX,   XXX,     XXX,   KC_DEL,  \
-        XXX,     RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_VAI,  RGB_VAD,  XXX,      KC_PGUP, KC_UP,   KC_PGDN,  XXX,        XXX,   XXX,     XXX,   XXX, \
+        XXX,     RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_VAI,  RGB_VAD,  XXX,      XXX,     KC_PGUP, KC_UP,    KC_PGDN,    XXX,   XXX,     XXX,   XXX, \
         XXX,     KC_CAPS,  XXX,      XXX,      XXX,      XXX,      XXX,      KC_LEFT, KC_DOWN, KC_RIGHT, XXX,        XXX,   XXX,     XXX,   KC_PSCR,  \
         XXX,     XXX,      NO_LESS,  NO_GRTR,  NO_PIPE,  XXX,      XXX,      XXX,     XXX,     XXX,      XXX,        XXX,   XXX,     XXX,   XXX, \
         XXX,     KC_LCTL,  KC_LGUI,  KC_LALT,  XXX,      XXX,      XXX,      XXX,     XXX,     XXX,      KC_RALT,    XXX,   KC_HOME, XXX,   KC_END
+    ),
+    /* double-extras */
+    [2] = LAYOUT(
+        XXX,     XXX,  KC_F1, KC_F2,  KC_F3,  KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,  KC_F9,  KC_F10,   KC_F11,  KC_F12,   XXX,  \
+        XXX,     XXX,  XXX,   XXX,    XXX,    XXX,   XXX,   XXX,   XXX,   XXX,    XXX,    XXX,      XXX,     XXX,      XXX, \
+        XXX,     XXX,  XXX,   XXX,    XXX,    XXX,   XXX,   XXX,   XXX,   XXX,    XXX,    XXX,      XXX,     XXX,      XXX,  \
+        XXX,     XXX,  XXX,   XXX,    XXX,    XXX,   XXX,   XXX,   XXX,   XXX,    XXX,    XXX,      XXX,     XXX,      XXX, \
+        XXX,     XXX,  XXX,   XXX,    XXX,    XXX,   XXX,   XXX,   XXX,   XXX,    XXX,    XXX,      XXX,     XXX,      XXX
     )
 };
+
+
+void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    for (uint8_t i = led_min; i <= led_max; i++) {
+        switch(get_highest_layer(layer_state|default_layer_state)) {
+            case 1:
+                rgb_matrix_set_color(i, RGB_BLUE);
+                break;
+            case 2:
+                rgb_matrix_set_color(i, RGB_YELLOW);
+                break;
+            default:
+                break;
+        }
+    }
+}

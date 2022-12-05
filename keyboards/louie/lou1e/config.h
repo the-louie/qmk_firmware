@@ -49,6 +49,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION ROW2COL
+
 /* No backlite
 #define BACKLIGHT_PIN B7
 #define BACKLIGHT_BREATHING
@@ -63,6 +64,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
 #define RGBLIGHT_SLEEP
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_TWINKLE+5
+#define DRIVER_LED_TOTAL 69
+
 #endif
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */

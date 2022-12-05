@@ -15,6 +15,8 @@
  */
 #pragma once
 #define XXX KC_NO
+#define DRIVER_LED_TOTAL 69
+
 
 #include "quantum.h"
 
